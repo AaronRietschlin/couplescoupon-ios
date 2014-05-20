@@ -19,6 +19,8 @@
 		F7B5C71B192AF1D700C3286C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B5C703192AF1D700C3286C /* UIKit.framework */; };
 		F7B5C723192AF1D700C3286C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7B5C721192AF1D700C3286C /* InfoPlist.strings */; };
 		F7B5C725192AF1D700C3286C /* CouplesCouponsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B5C724192AF1D700C3286C /* CouplesCouponsTests.m */; };
+		F7B5C730192AF34100C3286C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B5C72F192AF34100C3286C /* Login.storyboard */; };
+		F7B5C77F192AFD4000C3286C /* CCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B5C77E192AFD4000C3286C /* CCLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		F7B5C720192AF1D700C3286C /* CouplesCouponsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CouplesCouponsTests-Info.plist"; sourceTree = "<group>"; };
 		F7B5C722192AF1D700C3286C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F7B5C724192AF1D700C3286C /* CouplesCouponsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouplesCouponsTests.m; sourceTree = "<group>"; };
+		F7B5C72F192AF34100C3286C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		F7B5C77D192AFD4000C3286C /* CCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLoginViewController.h; sourceTree = "<group>"; };
+		F7B5C77E192AFD4000C3286C /* CCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,7 @@
 		F7B5C705192AF1D700C3286C /* CouplesCoupons */ = {
 			isa = PBXGroup;
 			children = (
+				F7B5C72E192AF32800C3286C /* login */,
 				F7B5C70E192AF1D700C3286C /* CCAppDelegate.h */,
 				F7B5C70F192AF1D700C3286C /* CCAppDelegate.m */,
 				F7B5C711192AF1D700C3286C /* Images.xcassets */,
@@ -142,6 +148,16 @@
 				F7B5C721192AF1D700C3286C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7B5C72E192AF32800C3286C /* login */ = {
+			isa = PBXGroup;
+			children = (
+				F7B5C72F192AF34100C3286C /* Login.storyboard */,
+				F7B5C77D192AFD4000C3286C /* CCLoginViewController.h */,
+				F7B5C77E192AFD4000C3286C /* CCLoginViewController.m */,
+			);
+			name = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +238,7 @@
 			files = (
 				F7B5C70A192AF1D700C3286C /* InfoPlist.strings in Resources */,
 				F7B5C712192AF1D700C3286C /* Images.xcassets in Resources */,
+				F7B5C730192AF34100C3286C /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +259,7 @@
 			files = (
 				F7B5C710192AF1D700C3286C /* CCAppDelegate.m in Sources */,
 				F7B5C70C192AF1D700C3286C /* main.m in Sources */,
+				F7B5C77F192AFD4000C3286C /* CCLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +460,7 @@
 				F7B5C72A192AF1D700C3286C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7B5C72B192AF1D700C3286C /* Build configuration list for PBXNativeTarget "CouplesCouponsTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +469,7 @@
 				F7B5C72D192AF1D700C3286C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
