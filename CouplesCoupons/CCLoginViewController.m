@@ -8,15 +8,18 @@
 
 #import "CCLoginViewController.h"
 #import "CCLoginViewController.h"
+#import <Parse/Parse.h>
 
 @interface CCLoginViewController ()
-
+-(void)moveToTableView;
+@property BOOL isActivityShowing;
 @end
 
 @implementation CCLoginViewController
 
 @synthesize emailField = _emailField;
 @synthesize passwordField = _passwordField;
+@synthesize progress = _progress;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +35,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.isActivityShowing = NO;
+    
     // TODO - Check if current user is nil
+    if(![PFUser currentUser]){
+        [self moveToTableView];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,7 +61,29 @@
     }
     
     // If it got here, we can perform a login.
-    
+    [PFUser logInWithUsernameInBackground:email password:password block:^(PFUser *user, NSError *error){
+        if(user){
+            // SUCCESS!
+
+            NSLog(@"Login was successful.");
+            [self moveToTableView];
+        }else{
+            NSLog(@"Login was not success. Error %@", [error localizedDescription]);
+        }
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
+    }];
+    if(!_progress && !self.isActivityShowing){
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
+    }
+}
+
+-(void)moveToTableView{
+    // TODO - Add code to the other view controller with the Coupons.
+    UIStoryboard *couponSB = [UIStoryboard storyboardWithName:@"coupons" bundle:nil];
+    UITableViewController *vc = [couponSB instantiateInitialViewController];
+    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController removeFromParentViewController];
+                              
 }
 
 @end

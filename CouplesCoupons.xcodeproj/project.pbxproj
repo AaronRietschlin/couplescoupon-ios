@@ -21,6 +21,19 @@
 		F7B5C725192AF1D700C3286C /* CouplesCouponsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B5C724192AF1D700C3286C /* CouplesCouponsTests.m */; };
 		F7B5C730192AF34100C3286C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B5C72F192AF34100C3286C /* Login.storyboard */; };
 		F7B5C77F192AFD4000C3286C /* CCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B5C77E192AFD4000C3286C /* CCLoginViewController.m */; };
+		F7B5C802192C4DD000C3286C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B5C801192C4DD000C3286C /* Parse.framework */; };
+		F7B5C804192C4DF200C3286C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B5C803192C4DF200C3286C /* AudioToolbox.framework */; };
+		F7B5C80A192C4E0400C3286C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B5C805192C4E0400C3286C /* CFNetwork.framework */; };
+		F7B5C810192C4E2100C3286C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B5C80F192C4E2100C3286C /* CoreLocation.framework */; };
+		F7B5C812192C4E4400C3286C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B5C811192C4E4400C3286C /* libz.dylib */; };
+		F7B5C814192C4E5500C3286C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B5C813192C4E5500C3286C /* MobileCoreServices.framework */; };
+		F7B5C816192C4E7000C3286C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B5C815192C4E7000C3286C /* QuartzCore.framework */; };
+		F7B5C818192C4E7700C3286C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B5C817192C4E7700C3286C /* Security.framework */; };
+		F7B5C81A192C4E7E00C3286C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B5C819192C4E7E00C3286C /* StoreKit.framework */; };
+		F7B5C81C192C4E8600C3286C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B5C81B192C4E8600C3286C /* SystemConfiguration.framework */; };
+		F7B5C81F192C560800C3286C /* coupons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B5C81E192C560800C3286C /* coupons.storyboard */; };
+		F7B5C822192C582D00C3286C /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B5C821192C582D00C3286C /* CCViewController.m */; };
+		F7B5C829192C598F00C3286C /* CCCoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B5C828192C598F00C3286C /* CCCoupon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +66,25 @@
 		F7B5C72F192AF34100C3286C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F7B5C77D192AFD4000C3286C /* CCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLoginViewController.h; sourceTree = "<group>"; };
 		F7B5C77E192AFD4000C3286C /* CCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLoginViewController.m; sourceTree = "<group>"; };
+		F7B5C801192C4DD000C3286C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F7B5C803192C4DF200C3286C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F7B5C805192C4E0400C3286C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F7B5C806192C4E0400C3286C /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		F7B5C807192C4E0400C3286C /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		F7B5C808192C4E0400C3286C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F7B5C809192C4E0400C3286C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		F7B5C80F192C4E2100C3286C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F7B5C811192C4E4400C3286C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F7B5C813192C4E5500C3286C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F7B5C815192C4E7000C3286C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F7B5C817192C4E7700C3286C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F7B5C819192C4E7E00C3286C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F7B5C81B192C4E8600C3286C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F7B5C81E192C560800C3286C /* coupons.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = coupons.storyboard; sourceTree = "<group>"; };
+		F7B5C820192C582D00C3286C /* CCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
+		F7B5C821192C582D00C3286C /* CCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		F7B5C827192C598F00C3286C /* CCCoupon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCoupon.h; sourceTree = "<group>"; };
+		F7B5C828192C598F00C3286C /* CCCoupon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCoupon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +92,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7B5C81C192C4E8600C3286C /* SystemConfiguration.framework in Frameworks */,
+				F7B5C81A192C4E7E00C3286C /* StoreKit.framework in Frameworks */,
+				F7B5C818192C4E7700C3286C /* Security.framework in Frameworks */,
+				F7B5C816192C4E7000C3286C /* QuartzCore.framework in Frameworks */,
+				F7B5C814192C4E5500C3286C /* MobileCoreServices.framework in Frameworks */,
+				F7B5C812192C4E4400C3286C /* libz.dylib in Frameworks */,
+				F7B5C810192C4E2100C3286C /* CoreLocation.framework in Frameworks */,
+				F7B5C80A192C4E0400C3286C /* CFNetwork.framework in Frameworks */,
 				F7B5C702192AF1D700C3286C /* CoreGraphics.framework in Frameworks */,
+				F7B5C804192C4DF200C3286C /* AudioToolbox.framework in Frameworks */,
 				F7B5C704192AF1D700C3286C /* UIKit.framework in Frameworks */,
+				F7B5C802192C4DD000C3286C /* Parse.framework in Frameworks */,
 				F7B5C700192AF1D700C3286C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +124,7 @@
 		F7B5C6F3192AF1D700C3286C = {
 			isa = PBXGroup;
 			children = (
+				F7B5C801192C4DD000C3286C /* Parse.framework */,
 				F7B5C705192AF1D700C3286C /* CouplesCoupons */,
 				F7B5C71E192AF1D700C3286C /* CouplesCouponsTests */,
 				F7B5C6FE192AF1D700C3286C /* Frameworks */,
@@ -101,6 +144,19 @@
 		F7B5C6FE192AF1D700C3286C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7B5C81B192C4E8600C3286C /* SystemConfiguration.framework */,
+				F7B5C819192C4E7E00C3286C /* StoreKit.framework */,
+				F7B5C817192C4E7700C3286C /* Security.framework */,
+				F7B5C815192C4E7000C3286C /* QuartzCore.framework */,
+				F7B5C813192C4E5500C3286C /* MobileCoreServices.framework */,
+				F7B5C811192C4E4400C3286C /* libz.dylib */,
+				F7B5C80F192C4E2100C3286C /* CoreLocation.framework */,
+				F7B5C805192C4E0400C3286C /* CFNetwork.framework */,
+				F7B5C806192C4E0400C3286C /* CoreAudio.framework */,
+				F7B5C807192C4E0400C3286C /* CoreBluetooth.framework */,
+				F7B5C808192C4E0400C3286C /* CoreData.framework */,
+				F7B5C809192C4E0400C3286C /* CoreFoundation.framework */,
+				F7B5C803192C4DF200C3286C /* AudioToolbox.framework */,
 				F7B5C6FF192AF1D700C3286C /* Foundation.framework */,
 				F7B5C701192AF1D700C3286C /* CoreGraphics.framework */,
 				F7B5C703192AF1D700C3286C /* UIKit.framework */,
@@ -112,6 +168,8 @@
 		F7B5C705192AF1D700C3286C /* CouplesCoupons */ = {
 			isa = PBXGroup;
 			children = (
+				F7B5C823192C592000C3286C /* model */,
+				F7B5C81D192C559D00C3286C /* coupons */,
 				F7B5C72E192AF32800C3286C /* login */,
 				F7B5C70E192AF1D700C3286C /* CCAppDelegate.h */,
 				F7B5C70F192AF1D700C3286C /* CCAppDelegate.m */,
@@ -158,6 +216,25 @@
 				F7B5C77E192AFD4000C3286C /* CCLoginViewController.m */,
 			);
 			name = login;
+			sourceTree = "<group>";
+		};
+		F7B5C81D192C559D00C3286C /* coupons */ = {
+			isa = PBXGroup;
+			children = (
+				F7B5C81E192C560800C3286C /* coupons.storyboard */,
+				F7B5C820192C582D00C3286C /* CCViewController.h */,
+				F7B5C821192C582D00C3286C /* CCViewController.m */,
+			);
+			name = coupons;
+			sourceTree = "<group>";
+		};
+		F7B5C823192C592000C3286C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F7B5C827192C598F00C3286C /* CCCoupon.h */,
+				F7B5C828192C598F00C3286C /* CCCoupon.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7B5C70A192AF1D700C3286C /* InfoPlist.strings in Resources */,
+				F7B5C81F192C560800C3286C /* coupons.storyboard in Resources */,
 				F7B5C712192AF1D700C3286C /* Images.xcassets in Resources */,
 				F7B5C730192AF34100C3286C /* Login.storyboard in Resources */,
 			);
@@ -258,7 +336,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7B5C710192AF1D700C3286C /* CCAppDelegate.m in Sources */,
+				F7B5C829192C598F00C3286C /* CCCoupon.m in Sources */,
 				F7B5C70C192AF1D700C3286C /* main.m in Sources */,
+				F7B5C822192C582D00C3286C /* CCViewController.m in Sources */,
 				F7B5C77F192AFD4000C3286C /* CCLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,9 +458,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CouplesCoupons/CouplesCoupons-Prefix.pch";
 				INFOPLIST_FILE = "CouplesCoupons/CouplesCoupons-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons,
+					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons/Versions/1.2.19,
+					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons/Versions/Current,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -391,9 +481,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CouplesCoupons/CouplesCoupons-Prefix.pch";
 				INFOPLIST_FILE = "CouplesCoupons/CouplesCoupons-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons,
+					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons/Versions/1.2.19,
+					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons/Versions/Current,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -12,6 +12,7 @@
 
 @property (nonatomic) IBOutlet UITextField *passwordField;
 @property (nonatomic) IBOutlet UITextField *emailField;
+@property (nonatomic) UIActivityIndicatorView *progress;
 
 -(IBAction)loginBtnClicked:(id)sender;
 

@@ -7,11 +7,19 @@
 //
 
 #import "CCAppDelegate.h"
+#import <Parse/Parse.h>
+#import "CCCoupon.h"
 
 @implementation CCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [CCCoupon registerSubclass];
+    [Parse setApplicationId:@"et5ComWuTT0wfoLL3RkgACwBM6jc3GFTQHDVF4yh" clientKey:@"rok4zqbYmSiyZovrfhoVnlvbkclVm7FmtfxT02ua"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     return YES;
 }
 
