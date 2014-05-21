@@ -10,4 +10,9 @@
 
 @interface CCLoginViewController : UIViewController
 
+@property (nonatomic) IBOutlet UITextField *passwordField;
+@property (nonatomic) IBOutlet UITextField *emailField;
+
+-(IBAction)loginBtnClicked:(id)sender;
+
 @end

@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Login-->
+        <!--Login View Controller - Login-->
         <scene sceneID="ILO-mJ-CaY">
             <objects>
-                <viewController title="Login" id="TZx-Sv-ow1" sceneMemberID="viewController">
+                <viewController title="Login" id="TZx-Sv-ow1" customClass="CCLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qaZ-tt-XSq"/>
                         <viewControllerLayoutGuide type="bottom" id="M1j-il-ACN"/>
@@ -35,6 +35,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnClicked:" destination="yNK-qf-Meh" eventType="touchUpInside" id="FES-Qy-VaQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -43,6 +46,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="dgi-bs-wd7"/>
+                    <connections>
+                        <outlet property="emailField" destination="wbR-IN-UJh" id="cU9-04-AAo"/>
+                        <outlet property="passwordField" destination="iDw-h0-Zp8" id="9KT-a0-4jy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNK-qf-Meh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
