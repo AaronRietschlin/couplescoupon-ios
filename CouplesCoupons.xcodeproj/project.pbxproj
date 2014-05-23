@@ -34,6 +34,10 @@
 		F7B5C81F192C560800C3286C /* coupons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B5C81E192C560800C3286C /* coupons.storyboard */; };
 		F7B5C822192C582D00C3286C /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B5C821192C582D00C3286C /* CCViewController.m */; };
 		F7B5C829192C598F00C3286C /* CCCoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B5C828192C598F00C3286C /* CCCoupon.m */; };
+		F7B5C82C192EEA9000C3286C /* CCCouponTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B5C82B192EEA9000C3286C /* CCCouponTableViewCell.m */; };
+		F7B5C832192EF74000C3286C /* CCParseCouponTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B5C831192EF74000C3286C /* CCParseCouponTableViewController.m */; };
+		F7B5C837192EFAC600C3286C /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B5C836192EFAC600C3286C /* test.storyboard */; };
+		F7B5C83A192EFAF900C3286C /* CCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B5C839192EFAF900C3286C /* CCTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,13 @@
 		F7B5C821192C582D00C3286C /* CCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
 		F7B5C827192C598F00C3286C /* CCCoupon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCoupon.h; sourceTree = "<group>"; };
 		F7B5C828192C598F00C3286C /* CCCoupon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCoupon.m; sourceTree = "<group>"; };
+		F7B5C82A192EEA9000C3286C /* CCCouponTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCouponTableViewCell.h; sourceTree = "<group>"; };
+		F7B5C82B192EEA9000C3286C /* CCCouponTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCouponTableViewCell.m; sourceTree = "<group>"; };
+		F7B5C830192EF74000C3286C /* CCParseCouponTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCParseCouponTableViewController.h; sourceTree = "<group>"; };
+		F7B5C831192EF74000C3286C /* CCParseCouponTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCParseCouponTableViewController.m; sourceTree = "<group>"; };
+		F7B5C836192EFAC600C3286C /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
+		F7B5C838192EFAF900C3286C /* CCTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTestViewController.h; sourceTree = "<group>"; };
+		F7B5C839192EFAF900C3286C /* CCTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +179,7 @@
 		F7B5C705192AF1D700C3286C /* CouplesCoupons */ = {
 			isa = PBXGroup;
 			children = (
+				F7B5C835192EFABA00C3286C /* test */,
 				F7B5C823192C592000C3286C /* model */,
 				F7B5C81D192C559D00C3286C /* coupons */,
 				F7B5C72E192AF32800C3286C /* login */,
@@ -221,9 +233,12 @@
 		F7B5C81D192C559D00C3286C /* coupons */ = {
 			isa = PBXGroup;
 			children = (
+				F7B5C82F192EF6E200C3286C /* parse_controllers */,
 				F7B5C81E192C560800C3286C /* coupons.storyboard */,
 				F7B5C820192C582D00C3286C /* CCViewController.h */,
 				F7B5C821192C582D00C3286C /* CCViewController.m */,
+				F7B5C82A192EEA9000C3286C /* CCCouponTableViewCell.h */,
+				F7B5C82B192EEA9000C3286C /* CCCouponTableViewCell.m */,
 			);
 			name = coupons;
 			sourceTree = "<group>";
@@ -235,6 +250,25 @@
 				F7B5C828192C598F00C3286C /* CCCoupon.m */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		F7B5C82F192EF6E200C3286C /* parse_controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7B5C830192EF74000C3286C /* CCParseCouponTableViewController.h */,
+				F7B5C831192EF74000C3286C /* CCParseCouponTableViewController.m */,
+			);
+			name = parse_controllers;
+			sourceTree = "<group>";
+		};
+		F7B5C835192EFABA00C3286C /* test */ = {
+			isa = PBXGroup;
+			children = (
+				F7B5C836192EFAC600C3286C /* test.storyboard */,
+				F7B5C838192EFAF900C3286C /* CCTestViewController.h */,
+				F7B5C839192EFAF900C3286C /* CCTestViewController.m */,
+			);
+			name = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +350,7 @@
 				F7B5C70A192AF1D700C3286C /* InfoPlist.strings in Resources */,
 				F7B5C81F192C560800C3286C /* coupons.storyboard in Resources */,
 				F7B5C712192AF1D700C3286C /* Images.xcassets in Resources */,
+				F7B5C837192EFAC600C3286C /* test.storyboard in Resources */,
 				F7B5C730192AF34100C3286C /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,8 +372,11 @@
 			files = (
 				F7B5C710192AF1D700C3286C /* CCAppDelegate.m in Sources */,
 				F7B5C829192C598F00C3286C /* CCCoupon.m in Sources */,
+				F7B5C832192EF74000C3286C /* CCParseCouponTableViewController.m in Sources */,
 				F7B5C70C192AF1D700C3286C /* main.m in Sources */,
+				F7B5C82C192EEA9000C3286C /* CCCouponTableViewCell.m in Sources */,
 				F7B5C822192C582D00C3286C /* CCViewController.m in Sources */,
+				F7B5C83A192EFAF900C3286C /* CCTestViewController.m in Sources */,
 				F7B5C77F192AFD4000C3286C /* CCLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

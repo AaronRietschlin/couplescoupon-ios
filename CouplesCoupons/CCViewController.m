@@ -7,10 +7,16 @@
 //
 
 #import "CCViewController.h"
+#import "CCCoupon.h"
+#import "CCCouponTableViewCell.h"
+#import <Parse/Parse.h>
+
 
 @interface CCViewController ()
 
 -(void)performLoadFromParse;
+
+@property NSMutableArray *coupons;
 
 @end
 
@@ -36,6 +42,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // Load the data.
+    [self performLoadFromParse];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,31 +53,47 @@
 }
 
 -(void) performLoadFromParse{
-
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
+    PFQuery *query = [CCCoupon query];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error){
+            self.coupons = [[NSMutableArray alloc] initWithArray:objects];
+            [self.tableView reloadData];
+        }
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
+    }];
+    
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.coupons count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"ListPrototypeCell";
+    CCCouponTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    CCCoupon *coupon = [self.coupons objectAtIndex:indexPath.row];
+    NSLog(@"Coupon title: %@", coupon.title);
+    cell.nameLabel.text = coupon.title;
+    cell.detailLabel.text = coupon.subtitle;
+    PFFile *image = coupon.image;
+    NSLog(@"Image: %@", image);
+    if(!image){
+        cell.imageView.file = image;
+    }else if(!coupon.ImageUrl){
+        [cell.imageView setIma]
+    }
     
     return cell;
 }

@@ -8,6 +8,7 @@
 
 #import "CCLoginViewController.h"
 #import "CCLoginViewController.h"
+#import "CCParseCouponTableViewController.h"
 #import <Parse/Parse.h>
 
 @interface CCLoginViewController ()
@@ -38,7 +39,7 @@
     self.isActivityShowing = NO;
     
     // TODO - Check if current user is nil
-    if(![PFUser currentUser]){
+    if([PFUser currentUser]){
         [self moveToTableView];
     }
 }
@@ -81,6 +82,7 @@
     // TODO - Add code to the other view controller with the Coupons.
     UIStoryboard *couponSB = [UIStoryboard storyboardWithName:@"coupons" bundle:nil];
     UITableViewController *vc = [couponSB instantiateInitialViewController];
+    CCParseCouponTableViewController *controller = [[CCParseCouponTableViewController alloc] initWithClassName:@"coupon"];
     [self.navigationController pushViewController:vc animated:YES];
     [self.navigationController removeFromParentViewController];
                               

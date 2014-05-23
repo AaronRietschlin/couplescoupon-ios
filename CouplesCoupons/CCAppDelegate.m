@@ -19,9 +19,11 @@
     [Parse setApplicationId:@"et5ComWuTT0wfoLL3RkgACwBM6jc3GFTQHDVF4yh" clientKey:@"rok4zqbYmSiyZovrfhoVnlvbkclVm7FmtfxT02ua"];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    [PFImageView class];
     
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
