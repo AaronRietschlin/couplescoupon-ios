@@ -16,6 +16,7 @@
 
 -(void)performLoadFromParse;
 
+
 @property NSMutableArray *coupons;
 
 @end
@@ -43,6 +44,7 @@
     
     // Load the data.
     [self performLoadFromParse];
+    
     
 }
 
@@ -92,11 +94,24 @@
     if(!image){
         cell.imageView.file = image;
     }else if(!coupon.ImageUrl){
-        [cell.imageView setIma]
+//        [cell.imageView setIma]
     }
     
     return cell;
 }
+
+
+-(void)tableView:(UITableView *) tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    // makes it so that the cell does not remain selected.
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    CCCoupon *coupon = [self.coupons objectAtIndex:indexPath.row];
+    
+    NSLog(@"Coupon: %@", coupon);
+    PFUser *current = [PFUser currentUser];
+    PFUser *partner = current[@"partner"];
+    NSLog(@"Partner: %@", partner);
+}
+
 
 /*
 // Override to support conditional editing of the table view.
