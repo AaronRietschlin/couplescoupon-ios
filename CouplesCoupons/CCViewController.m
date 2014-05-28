@@ -109,6 +109,7 @@
     NSLog(@"Coupon: %@", coupon);
     PFUser *current = [PFUser currentUser];
     PFUser *partner = current[@"partner"];
+    
     NSLog(@"Partner: %@", partner);
 }
 
