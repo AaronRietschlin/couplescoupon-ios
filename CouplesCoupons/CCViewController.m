@@ -143,10 +143,9 @@
     CCCoupon *coupon = [self.coupons objectAtIndex:indexPath.row];
     
     if(coupon.redeemed){
-        NSLog(@"Coupon is redeemed.");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Coupon Redeemed" message:[NSString stringWithFormat:@"%@ is already redeemed. You can only redeem a coupon once.", coupon.title] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+        [alert show];
     }else{
-        NSLog(@"Coupon is not redeemed.");
-        
         UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"Redeem this coupon?" message:[NSString stringWithFormat:@"Would you like to redeem the following coupon: \n\n%@\n\nDoing so will remove this for future use.", coupon.title] delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
         
         // Add it to the list of selected
