@@ -13,6 +13,8 @@
 @synthesize nameLabel = _nameLabel;
 @synthesize detailLabel = _detailLabel;
 @synthesize imageView = _imageView;
+@synthesize labelGradient = _labelGradient;
+@synthesize foreground = _foreground;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

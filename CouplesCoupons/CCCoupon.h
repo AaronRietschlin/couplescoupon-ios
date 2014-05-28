@@ -14,7 +14,7 @@
 
 @property (retain) NSString *title;
 @property (retain) NSString *subtitle;
-@property BOOL *isRedeemed;
+@property BOOL redeemed;
 @property (retain) NSString *ImageUrl;
 @property (retain) PFFile *image;
 

@@ -19,6 +19,9 @@
 
 @property NSMutableArray *coupons;
 
+@property NSMutableArray *selectedCoupons;
+@property CCCoupon *selectedCoupon;
+
 @end
 
 @implementation CCViewController
@@ -44,8 +47,6 @@
     
     // Load the data.
     [self performLoadFromParse];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,6 +59,7 @@
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
     PFQuery *query = [CCCoupon query];
+    [query orderByAscending:@"redeemed"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
             self.coupons = [[NSMutableArray alloc] initWithArray:objects];
@@ -65,6 +67,37 @@
         }
         [UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
     }];
+    
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if(buttonIndex == 0){
+        // Cancel was selected. Thus, we don't need to do anything.
+    }else if(buttonIndex == 1){
+        // OK was selected. Mark as redeemed and let the partner know.
+        self.selectedCoupon.redeemed = YES;
+        [self.selectedCoupon saveInBackground];
+        
+        
+        // Get the current user and its partner
+        PFUser *current = [PFUser currentUser];
+        if(current != nil){
+            PFUser* partner = [current objectForKey:@"partner"];
+            NSLog(@"Partner: %@", partner);
+            PFPush *push = [[PFPush alloc] init];
+            [push setChannel:[NSString stringWithFormat:@"user_%@", partner.objectId]];
+            NSString *name = [current objectForKey:@"name"];
+            NSLog(@"Name: %@", name);
+            [push setMessage:[NSString stringWithFormat:@"%@ redeemed: %@", name, self.selectedCoupon.title]];
+            [push sendPushInBackground];
+        }
+        
+        [self.tableView reloadData];
+        
+    }
+    // Now remove it as the selected coupon
+    self.selectedCoupon = nil;
     
 }
 
@@ -86,33 +119,47 @@
     CCCouponTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     CCCoupon *coupon = [self.coupons objectAtIndex:indexPath.row];
-    NSLog(@"Coupon title: %@", coupon.title);
     cell.nameLabel.text = coupon.title;
     cell.detailLabel.text = coupon.subtitle;
     PFFile *image = coupon.image;
-    NSLog(@"Image: %@", image);
-    if(!image){
+    if(image != nil){
         cell.imageView.file = image;
+        [cell.imageView loadInBackground];
     }else if(!coupon.ImageUrl){
-//        [cell.imageView setIma]
+        //        [cell.imageView setIma]
+    }
+    
+    // Set the opacity of the view
+    if(coupon.redeemed){
+        [cell.foreground setAlpha:1.0F];
     }
     
     return cell;
 }
-
 
 -(void)tableView:(UITableView *) tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     // makes it so that the cell does not remain selected.
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     CCCoupon *coupon = [self.coupons objectAtIndex:indexPath.row];
     
-    NSLog(@"Coupon: %@", coupon);
-    PFUser *current = [PFUser currentUser];
-    PFUser *partner = current[@"partner"];
+    if(coupon.redeemed){
+        NSLog(@"Coupon is redeemed.");
+    }else{
+        NSLog(@"Coupon is not redeemed.");
+        
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"Redeem this coupon?" message:[NSString stringWithFormat:@"Would you like to redeem the following coupon: \n\n%@\n\nDoing so will remove this for future use.", coupon.title] delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+        
+        // Add it to the list of selected
+        if(self.selectedCoupons == nil){
+            self.selectedCoupons = [[NSMutableArray alloc] init];
+        }
+        [self.selectedCoupons addObject:coupon];
+        self.selectedCoupon = coupon;
+        [view show];
+    }
     
-    NSLog(@"Partner: %@", partner);
+    NSLog(@"Current user: %@", [PFUser currentUser]);	
 }
-
 
 /*
 // Override to support conditional editing of the table view.

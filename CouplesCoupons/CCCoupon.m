@@ -13,7 +13,7 @@
 
 @dynamic title;
 @dynamic subtitle;
-@dynamic isRedeemed;
+@dynamic redeemed;
 @dynamic image;
 @dynamic ImageUrl;
 

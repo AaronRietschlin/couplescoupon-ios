@@ -14,5 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 @property (weak, nonatomic) IBOutlet PFImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIView *labelGradient;
+@property (weak, nonatomic) IBOutlet UIView *foreground;
 
 @end

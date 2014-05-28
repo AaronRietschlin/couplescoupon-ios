@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CCViewController : UITableViewController
-
+@interface CCViewController : UITableViewController <UIAlertViewDelegate>
 @end
