@@ -8,7 +8,6 @@
 
 #import "CCLoginViewController.h"
 #import "CCLoginViewController.h"
-#import "CCParseCouponTableViewController.h"
 #import <Parse/Parse.h>
 
 @interface CCLoginViewController ()
@@ -85,7 +84,6 @@
     // TODO - Add code to the other view controller with the Coupons.
     UIStoryboard *couponSB = [UIStoryboard storyboardWithName:@"coupons" bundle:nil];
     UITableViewController *vc = [couponSB instantiateInitialViewController];
-    CCParseCouponTableViewController *controller = [[CCParseCouponTableViewController alloc] initWithClassName:@"coupon"];
     [self.navigationController presentViewController:vc animated:YES completion:NULL];
     [self.navigationController removeFromParentViewController];
                               

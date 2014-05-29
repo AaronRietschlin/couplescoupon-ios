@@ -9,4 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CCViewController : UITableViewController <UIAlertViewDelegate>
+
+-(IBAction)logout:(id)sender;
+
 @end

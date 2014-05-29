@@ -33,6 +33,7 @@
                                 <rect key="frame" x="137" y="189" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.59537839889526367" green="0.26883740982677246" blue="0.49411807969561877" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -41,6 +42,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.45154041585251592" blue="0.8299227526770615" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wbR-IN-UJh" firstAttribute="top" secondItem="qaZ-tt-XSq" secondAttribute="bottom" constant="49" id="53c-LL-ddg"/>
                         </constraints>

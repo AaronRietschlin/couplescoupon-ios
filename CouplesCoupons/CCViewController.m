@@ -15,7 +15,7 @@
 @interface CCViewController ()
 
 -(void)performLoadFromParse;
-
+-(void)setColors;
 
 @property NSMutableArray *coupons;
 
@@ -47,7 +47,21 @@
     
     // Load the data.
     [self performLoadFromParse];
+    [self setColors];
+    
 }
+
+-(void)setColors{
+    // Set the bar tint color
+    self.navigationController.navigationBar.barTintColor = [UIColor magentaColor];
+    
+    // Now set the background color of the view.
+    NSString *hexColor =  @"#F8BBD0";
+    NSUInteger red, green, blue;
+    sscanf([hexColor UTF8String], "#%02X%02X%02X", &red, &green, &blue);
+    self.view.backgroundColor = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -72,7 +86,12 @@
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
-    if(buttonIndex == 0){
+    NSString *buttonText = [alertView buttonTitleAtIndex:buttonIndex];
+    if([buttonText isEqualToString:@"Logout"]){
+        // This is the logout
+        [PFUser logOut];
+        [self.navigationController dismissViewControllerAnimated:YES completion:NULL];
+    }else if(buttonIndex == 0){
         // Cancel was selected. Thus, we don't need to do anything.
     }else if(buttonIndex == 1){
         // OK was selected. Mark as redeemed and let the partner know.
@@ -99,6 +118,11 @@
     // Now remove it as the selected coupon
     self.selectedCoupon = nil;
     
+}
+
+-(IBAction)logout:(id)sender{
+    UIAlertView *logoutAlert = [[UIAlertView alloc] initWithTitle:@"Logout?" message:@"Are you sure you want to logout?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Logout", nil];
+    [logoutAlert show];
 }
 
 #pragma mark - Table view data source

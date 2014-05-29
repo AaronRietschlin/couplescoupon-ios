@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IfR-nm-mBa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Epy-16-MJZ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Coupons-->
         <scene sceneID="Ty0-1P-JZq">
             <objects>
                 <tableViewController id="IfR-nm-mBa" customClass="CCViewController" sceneMemberID="viewController">
@@ -14,7 +14,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListPrototypeCell" rowHeight="199" id="t0v-Uj-zko" customClass="CCCouponTableViewCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="199"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="199"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t0v-Uj-zko" id="GBF-tk-En4">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="198"/>
@@ -63,8 +63,34 @@
                             <outlet property="delegate" destination="IfR-nm-mBa" id="5f7-ea-HpG"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Coupons" id="LNS-t7-xw4">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="oWr-bd-bjx">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="logout:" destination="IfR-nm-mBa" id="TZY-Yq-eFk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVt-Fe-jM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669" y="-39"/>
+        </scene>
+        <!--Navigation Controller - Coupons-->
+        <scene sceneID="PLt-IA-ejC">
+            <objects>
+                <navigationController title="Coupons" automaticallyAdjustsScrollViewInsets="NO" id="Epy-16-MJZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YNx-pO-gj6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IfR-nm-mBa" kind="relationship" relationship="rootViewController" id="LaC-Ti-iUA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="85v-bt-tn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="143" y="-39"/>
         </scene>
