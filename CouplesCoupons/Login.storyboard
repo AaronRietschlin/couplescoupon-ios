@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="M1j-il-ACN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PDl-8a-fCr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wbR-IN-UJh">
@@ -46,6 +46,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="dgi-bs-wd7"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="emailField" destination="wbR-IN-UJh" id="cU9-04-AAo"/>
                         <outlet property="passwordField" destination="iDw-h0-Zp8" id="9KT-a0-4jy"/>

@@ -42,6 +42,9 @@
     if([PFUser currentUser]){
         [self moveToTableView];
     }
+    
+    // Set the tint color
+    self.navigationController.navigationBar.barTintColor = [UIColor magentaColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,7 +86,7 @@
     UIStoryboard *couponSB = [UIStoryboard storyboardWithName:@"coupons" bundle:nil];
     UITableViewController *vc = [couponSB instantiateInitialViewController];
     CCParseCouponTableViewController *controller = [[CCParseCouponTableViewController alloc] initWithClassName:@"coupon"];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController presentViewController:vc animated:YES completion:NULL];
     [self.navigationController removeFromParentViewController];
                               
 }
