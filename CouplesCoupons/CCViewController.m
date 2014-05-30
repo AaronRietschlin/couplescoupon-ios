@@ -74,6 +74,7 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
     PFQuery *query = [CCCoupon query];
     [query orderByAscending:@"redeemed"];
+    [query whereKey:@"active" equalTo:@YES];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
             self.coupons = [[NSMutableArray alloc] initWithArray:objects];
@@ -123,6 +124,10 @@
 -(IBAction)logout:(id)sender{
     UIAlertView *logoutAlert = [[UIAlertView alloc] initWithTitle:@"Logout?" message:@"Are you sure you want to logout?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Logout", nil];
     [logoutAlert show];
+}
+
+-(IBAction)refresh:(id)sender{
+    [self performLoadFromParse];
 }
 
 #pragma mark - Table view data source

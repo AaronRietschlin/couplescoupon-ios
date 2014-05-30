@@ -11,5 +11,6 @@
 @interface CCViewController : UITableViewController <UIAlertViewDelegate>
 
 -(IBAction)logout:(id)sender;
+-(IBAction)refresh:(id)sender;
 
 @end

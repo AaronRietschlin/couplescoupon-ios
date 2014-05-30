@@ -64,6 +64,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Coupons" id="LNS-t7-xw4">
+                        <barButtonItem key="leftBarButtonItem" title="Reload" id="4yD-Ka-Git">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="refresh:" destination="IfR-nm-mBa" id="n6c-Oo-E3R"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="oWr-bd-bjx">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
