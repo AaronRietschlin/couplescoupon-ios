@@ -61,16 +61,17 @@
         UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"Invalid input" message:@"You must enter a valid email and password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
         return;
-    }
+    }		
     
     // If it got here, we can perform a login.
     [PFUser logInWithUsernameInBackground:email password:password block:^(PFUser *user, NSError *error){
         if(user){
             // SUCCESS!
-
             NSLog(@"Login was successful.");
             [self moveToTableView];
         }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Error" message:@"An error occurred logging in. Please check your username/password and try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
             NSLog(@"Login was not success. Error %@", [error localizedDescription]);
         }
         [UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;

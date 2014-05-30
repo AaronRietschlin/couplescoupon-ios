@@ -496,6 +496,7 @@
 					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons/Versions/Current,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -519,6 +520,7 @@
 					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons/Versions/Current,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
