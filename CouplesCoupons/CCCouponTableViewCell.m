@@ -10,11 +10,15 @@
 
 @implementation CCCouponTableViewCell
 
+// bleh fuck this never synthesize manually unless you have to (you don't have to)
 @synthesize nameLabel = _nameLabel;
 @synthesize detailLabel = _detailLabel;
 @synthesize imageView = _imageView;
 @synthesize labelGradient = _labelGradient;
 @synthesize foreground = _foreground;
+
+
+// BLEH delete these methods, they're useless
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

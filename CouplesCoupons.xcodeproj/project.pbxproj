@@ -101,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7B5C81C192C4E8600C3286C /* SystemConfiguration.framework in Frameworks */,
+				F7B5C802192C4DD000C3286C /* Parse.framework in Frameworks */,
 				F7B5C81A192C4E7E00C3286C /* StoreKit.framework in Frameworks */,
 				F7B5C818192C4E7700C3286C /* Security.framework in Frameworks */,
 				F7B5C816192C4E7000C3286C /* QuartzCore.framework in Frameworks */,
@@ -111,7 +112,6 @@
 				F7B5C702192AF1D700C3286C /* CoreGraphics.framework in Frameworks */,
 				F7B5C804192C4DF200C3286C /* AudioToolbox.framework in Frameworks */,
 				F7B5C704192AF1D700C3286C /* UIKit.framework in Frameworks */,
-				F7B5C802192C4DD000C3286C /* Parse.framework in Frameworks */,
 				F7B5C700192AF1D700C3286C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +485,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CouplesCoupons/CouplesCoupons-Prefix.pch";
@@ -509,6 +510,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CouplesCoupons/CouplesCoupons-Prefix.pch";

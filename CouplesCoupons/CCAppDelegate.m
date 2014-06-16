@@ -28,6 +28,7 @@
     return YES;
 }
 
+// Bleh delete these methods no big deal, only need 'em if you need 'em
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
