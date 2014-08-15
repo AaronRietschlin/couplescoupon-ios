@@ -306,6 +306,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Aaron.RIetschlin;
 				TargetAttributes = {
+					F7B5C6FB192AF1D700C3286C = {
+						DevelopmentTeam = 75Y586SA36;
+					};
 					F7B5C716192AF1D700C3286C = {
 						TestTargetID = F7B5C6FB192AF1D700C3286C;
 					};
@@ -482,6 +485,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons,
@@ -496,6 +501,7 @@
 					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons/Versions/Current,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -506,6 +512,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons,
@@ -520,6 +528,7 @@
 					/Users/eProximiti10/Documents/aarons_stuff/CouplesCoupons/Versions/Current,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

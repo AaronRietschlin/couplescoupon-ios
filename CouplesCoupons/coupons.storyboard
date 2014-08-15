@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Epy-16-MJZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Epy-16-MJZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Coupons-->
+        <!--View Controller - Test-->
         <scene sceneID="Ty0-1P-JZq">
             <objects>
                 <tableViewController id="IfR-nm-mBa" customClass="CCViewController" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                             <outlet property="delegate" destination="IfR-nm-mBa" id="5f7-ea-HpG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Coupons" id="LNS-t7-xw4">
+                    <navigationItem key="navigationItem" title="Test" id="LNS-t7-xw4">
                         <barButtonItem key="leftBarButtonItem" title="Reload" id="4yD-Ka-Git">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
